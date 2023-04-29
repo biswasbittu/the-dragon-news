@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Container } from 'react-bootstrap';
 
 const LeftNav = () => {
   const [categories, setCategories] = useState([]);
@@ -12,7 +13,7 @@ const LeftNav = () => {
       .catch((error) => console.log(error));
   }, []);
   return (
-    <div>
+    <Container>
       <h4>All Category </h4>
      <div className="ps-4">
      {categories.map((category) => 
@@ -21,7 +22,7 @@ const LeftNav = () => {
        </p>
       )}
      </div>
-    </div>
+    </Container>
   );
 };
 
