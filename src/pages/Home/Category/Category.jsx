@@ -6,11 +6,11 @@ import { Container } from 'react-bootstrap';
 const Category = () => {
   const { id } = useParams();
   const categoryNews = useLoaderData();
-  console.log(categoryNews);
+  // console.log(categoryNews);
 
   return (
     <Container>
-      <h2>This is a catagory:{categoryNews.length}</h2>
+      {id && <h2>This is a catagory:{categoryNews.length}</h2>}
       {categoryNews.map((news) => (
         <NewsCard key={news._id} news={news} />
       ))}
